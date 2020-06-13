@@ -1,0 +1,421 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Calibri, 'Trebuchet MS', sans-serif;
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  text-decoration: none !important;
+  color: none !important;
+}
+
+.top__section{
+  max-width: 100%;
+  height: 52px;
+  background: #191341;
+  padding: 1rem 0rem;
+}
+
+.top__content .icons i{
+  color: #ffffff;
+}
+
+.top__content .select {
+  color: #ffffff;
+}
+
+.top__content .select i{
+  padding-top: 8px;
+}
+
+
+.top__content .select .text{
+  font-size: 18px;
+}
+
+/* main frame background color */
+
+.main__frame {
+  width: 100%;
+  height: calc(100vh - 50px);
+  background-image: url('/assets/images/home/Rectangle1.png');
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-size: cover;
+  position: relative;
+}
+
+.main__frame::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff!important;
+}
+
+/* navigation */
+
+nav {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 80px;
+  z-index: 3;
+  padding: 0 1.5em;
+}
+
+nav .navBrand {
+  font-family: Calibri;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 70px;
+  color: #ffff;
+  z-index: 3;
+  float: left;
+}
+
+nav ul {
+  float: right;
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 70px;
+}
+
+nav li a {
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+  color: #FFFFFF !important;
+  padding: 8px 17px;
+}
+
+nav li a:hover {
+  background: #191341;
+  box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+
+/* Hamburger menu with CSS */
+
+.checkbtn {
+  position: relative;
+  top: 32px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  display: block;
+  background: #fff;
+  height: 3px;
+  width: 1.8rem;
+  border-radius: 4px;
+  transition: all .4s ease-out;
+}
+
+.hamburger::before {
+  transform: translateY(-8px);
+}
+
+.hamburger::after {
+  transform: translateY(5px);
+}
+
+/* Hamburger icon switch to X */
+#check:checked~.checkbtn .hamburger {
+  transform: rotate(45deg);
+  background: #fff;
+}
+
+ #check:checked~.checkbtn .hamburger::after {
+  transform: translateY(-3px) rotate(-90deg);
+  background: #fff;
+}
+
+#check:checked~.checkbtn .hamburger::before {
+  opacity: 0 !important;
+}
+
+.cont-head {
+  position: relative;
+  z-index: 2;
+}
+
+@media screen and (min-width: 300px) and (max-width: 450px) {
+  .top__content {
+    padding: 0rem 1.5em;
+  }
+
+  .top__content .icons i{
+    font-size: 14px;
+  }
+
+  .icons .pr-3 {
+    padding-right: 0.7rem !important;
+  }
+
+  .top__content .select i{
+    padding-top: 3px;
+  }
+  
+  .top__content .select .text{
+    font-size: 14px;
+  }
+
+  nav .navBrand {
+    font-size: 27px;
+  }
+
+  nav .container {
+    max-width: 440px;
+  }
+
+  nav ul {
+    top: 3.5em !important;
+  }
+
+  .cont-head {
+    padding-top: 3em;
+  }
+
+  .main__frame {
+    height: 37em;
+  }
+}
+
+@media screen and (min-width: 550px) and (max-width: 772px) {
+  
+  nav {
+    padding: 0px 3em !important;
+  }
+
+  nav .navBrand {
+    font-size: 33px;
+  }
+  
+  nav ul {
+    top: 4em !important;
+  }
+
+  .top__content > .pb-3, .py-3 {
+    padding-bottom: 0rem!important;
+  }
+
+  .top__content > .pt-3, .py-3 {
+    padding-top: 0.5rem!important;
+  }
+
+  .top__content .select .text{
+    font-size: 18px;
+  }
+
+  .main__frame {
+    height: 35em;
+  }
+
+}  
+
+@media screen and (max-width: 850px) {
+  .checkbtn {
+    display: block;
+  }
+
+  .nav .container {
+    width: 100%;
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+  nav ul {
+    position: absolute;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    top: 4em;
+    left: -100%;
+    text-align: center;
+    transition: all .4s;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 36px 0;
+    line-height: 30px;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  li a:hover,
+  a.active {
+    background: none;
+    color: #191341;
+  }
+
+  #check:checked~ul {
+    left: 0;
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1250px) {
+  nav {
+    padding: 0 3em !important;
+  }
+
+  nav .navBrand {
+    font-size: 33px !important;
+  }
+
+  li a {
+    font-size: 14px !important;
+    padding: 8px 14px !important;
+  }
+
+  .container {
+    padding: 0px 0px !important;
+  }
+
+  .vert-head .words { 
+    width: 80%;
+    margin: 0 auto;
+    font-size: 24px;
+    line-height: 29px;
+  }
+  .vert-head .home{ 
+    font-weight: bold;
+    font-size: 54px;
+    line-height: 78px;
+  }
+}
+
+@media screen and (min-width: 1250px) {
+  .vert-head .words { 
+    width: 48%;
+    margin: 0 auto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+  }
+  .vert-head .home{ 
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 78px;
+  }
+}
+
+/* footer  */
+footer {
+  color: white;
+  padding: 3em;
+  background-color: #191341;
+}
+
+footer h2 {
+  /* width: 90%; */
+  margin: auto;
+  font-size: 30px;
+  /* padding: 0.3em 0em; */
+  text-transform: uppercase
+}
+
+  .de-table {
+  margin: auto;
+  width: 95%;
+  display: flex;
+  padding-left: 2em;
+}
+
+  .de-table ul {
+    list-style-type: none;
+  }
+
+.de-column {
+  width: 40%
+}
+
+#theader {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 32px;
+  text-transform: uppercase;
+}
+
+.d-row li {
+  padding: 3px;
+  font-size: 15px
+}
+
+.d-row li a {
+  color: rgb(199, 196, 196);
+  text-decoration: none;
+  padding: 2px
+}
+
+.links {
+  padding: 1.5em 0em;
+}
+
+.links .fab {
+  padding: 15px;
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+@media (max-width: 991px) {
+  footer {
+    /* text-align: center; */
+    color: white;
+    padding-left: 2em
+  }
+
+  .d-table {
+    display: block;
+    padding: 0em
+  }
+
+  .de-column {
+    width: 100%;
+    padding: 1em;
+
+  }
+
+  #theader {
+    line-height: 15px;
+  }
+
+  
+}
+
+.d-row>li{
+  list-style: none !important;
+}

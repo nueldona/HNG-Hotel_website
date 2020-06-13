@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+
+.booking__section {
+  width: 939px;
+  height: 250px;
+  position: relative;
+  z-index: 2;
+  margin: 0 auto;
+  /* overflow: hidden; */
+}
+
+.booking {
+  width: 939px;
+  height: 100px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 0px 10px 0px 0px;
+}
+
+.booking__heading {
+  width: 138px;
+  height: 81px;
+  background: #FFFFFF;
+  box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 10px 10px 0px 0px;
+}  
+
+.booking__heading h4 {
+  font-family: Calibri;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 27px;
+  width: 80px;
+  height: 54px;
+  padding: 10px 0px 0px 23px ;
+
+  color: #191341;
+}
+
+.booking-info {
+  display: flex;
+  flex-direction: row;
+  align-self: center;justify-content: space-evenly;
+  padding-top: 20px;
+}
+
+.room-type {
+  border: 1px solid rgba(119, 117, 117, 0.521);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 162px;
+  height: 67px;
+  background: #FFFFFF;
+  padding: 3px 0px 5px 0px;
+}
+
+.room-type p {
+  margin-bottom: 0px;
+}
+
+.room-type .tx {
+  font-family: Calibri;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 27px;
+  color: #4F4F4F;
+}
+
+.tx span {
+  font-size: 20px;
+  margin-left: 3px;
+}
+
+
+.booking .availability {
+  background: #191341;
+  color: white;
+  width: 156px;
+  height: 40px;
+  align-self: center;
+  transition: background-color 0.4s, color 0.4s;
+  border-radius: 10px;
+}
+
+.booking .availability:hover {
+  background-color: white;
+  color: black;
+}
+
+.booking__section-mobile {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+
+@media screen and (max-width: 852px) {
+
+  .booking__section {
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: 960px) {
+  .booking__section {
+    width: 800px;
+  }
+
+  .booking {
+    width: 800px;;
+  }
+
+  .room-type .tx {
+    font-size: 18px;
+  }
+  
+  .tx span {
+    font-size: 17px;
+    margin-left: 3px;
+  }
+
+  .room-type p {
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+  
+}
