@@ -164,7 +164,7 @@ img {
 
 @media only screen and (min-width: 300px) and (max-width: 450px) {
   .items .icons  {
-    width: 40%;
+    width: 46%;
     margin: 0px 30px 0px 125px;
   }
 
@@ -186,7 +186,7 @@ img {
   }
 
   .items .icons  {
-    width: 60%;
+    width: 66%;
     margin: 0px 0px 0px 70px;
   }
 
@@ -205,7 +205,7 @@ img {
   }
 
   .items .icons  {
-    width: 50%;
+    width: 57%;
     margin: 0px 30px 0px 90px;
   }
 
